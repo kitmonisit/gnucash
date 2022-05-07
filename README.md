@@ -8,6 +8,8 @@ $ cmake \
     -DWITH_AQBANKING=OFF \
     -DWITH_OFX=OFF \
     ../gnucash
+$ make install
+$ LD_LIBRARY_PATH=/home/linuxbrew/.linuxbrew/lib gnucash
 ```
 
 ############################################################
