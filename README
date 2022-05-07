@@ -1,3 +1,15 @@
+```
+$ apt install libwebkit2gtk-4.0 libwebkit2gtk-4.0-dev
+$ apt install libdbi-dev libdbd-mysql libdbd-sqlite3
+$ cmake \
+    -DCMAKE_INSTALL_PREFIX=$HOME/opt/gnucash \
+    -DCMAKE_PREFIX_PATH=/home/linuxbrew/.linuxbrew \
+    -DWITH_PYTHON=ON \
+    -DWITH_AQBANKING=OFF \
+    -DWITH_OFX=OFF \
+    ../gnucash
+```
+
 ############################################################
           GnuCash README file.
 
