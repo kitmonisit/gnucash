@@ -1,4 +1,11 @@
 ```
+$ cd /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
+$ git log --follow -- boost.rb
+
+# Look for boost-1.78.0_1 release
+$ git checkout 83fb594848bbf0fdabdfcdbf2c9cdb2032327793 boost.rb
+$ git reset .
+
 $ apt install libwebkit2gtk-4.0 libwebkit2gtk-4.0-dev
 $ apt install libdbi-dev libdbd-mysql libdbd-sqlite3
 $ cmake \
