@@ -1,8 +1,14 @@
 kit-build:
 	cmake \
-		-DCMAKE_INSTALL_PREFIX=$HOME/opt/gnucash \
-		-DCMAKE_PREFIX_PATH=/home/linuxbrew/.linuxbrew \
+		-DCMAKE_INSTALL_PREFIX=${HOME}/opt/gnucash \
 		-DWITH_PYTHON=ON \
 		-DWITH_AQBANKING=OFF \
 		-DWITH_OFX=OFF \
-		../gnucash
+		/home/kit/custom/downloads/gnucash
+	#cmake \
+	#    -DCMAKE_INSTALL_PREFIX=$HOME/opt/gnucash \
+	#    -DCMAKE_PREFIX_PATH=/home/linuxbrew/.linuxbrew \
+	#    -DWITH_PYTHON=ON \
+	#    -DWITH_AQBANKING=OFF \
+	#    -DWITH_OFX=OFF \
+	#    ../gnucash

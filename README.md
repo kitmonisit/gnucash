@@ -1,9 +1,20 @@
+1. Remove `/home/linuxbrew/.linuxbrew/bin` from `$PATH`.
+
 ```
+$ cd /home/linuxbrew/.linuxbrew/Homebrew/Library/Taps/homebrew/homebrew-core/Formula
+$ git log --follow -- boost.rb
+
+# Look for boost-1.78.0_1 release
+$ git checkout 83fb594848bbf0fdabdfcdbf2c9cdb2032327793 boost.rb
+$ git reset .
+$ brew uninstall boost
+$ brew install --build-from-source boost
+
 $ apt install libwebkit2gtk-4.0 libwebkit2gtk-4.0-dev
 $ apt install libdbi-dev libdbd-mysql libdbd-sqlite3
+$ apt install libxslt1-dev swig guile-2.0 guile-2.0-dev libboost-all-dev
 $ cmake \
     -DCMAKE_INSTALL_PREFIX=$HOME/opt/gnucash \
-    -DCMAKE_PREFIX_PATH=/home/linuxbrew/.linuxbrew \
     -DWITH_PYTHON=ON \
     -DWITH_AQBANKING=OFF \
     -DWITH_OFX=OFF \
